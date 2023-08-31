@@ -14,12 +14,12 @@
 .sheet-skills-header{
 	margin-bottom: 8px;
 	text-align: center; 
-	color: #FFF; 
+	color: gold; 
 	background-color: #000;
 }
 
 .charsheet{
-	background-color: lightgray;
+	background-color: lightblue;
     width: 830px
 }
 
@@ -217,7 +217,7 @@ div[data-groupname="repeating_Hand-to-Hand"] .strike-rank
 
 .sheet-section-header{
 	text-align: center; 
-	color: #FFF; 
+	color: gold; 
 	background-color: #000;
 }
 
@@ -315,7 +315,7 @@ button[type="roll"].plain-major-wound::before
 {
     content: "";
 	width: 117px;
-	color: #fff ; 
+	color: gold ; 
 	background-color: #000
 	
 }
@@ -329,7 +329,7 @@ button[type="roll"].plain-major-wound::before
 
 
 .hit-location-selection {
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 	width:100%
 }
@@ -340,7 +340,7 @@ button[type="roll"].plain-major-wound::before
 }
 
 .hit-location-selection  select{
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 	margin-top: 3px;
 }
@@ -365,7 +365,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-HL-Missle th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-HL-Missle table {
@@ -377,7 +377,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-HL-Melee th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-HL-Melee table {
@@ -389,7 +389,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-skillRoll th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-skillRoll table {
@@ -401,7 +401,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-characteristicRoll th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-characteristicRoll table {
@@ -413,7 +413,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-ResistanceRoll th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-ResistanceRoll table {
@@ -425,7 +425,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-sanityRoll th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-sanityRoll table {
@@ -437,7 +437,7 @@ button[type="roll"].plain-major-wound::before
 
 .sheet-rolltemplate-melee-roll th {
 	text-align: centre;
-	color: #ffffff;
+	color: gold;
     background-color: #000000;
 }
 .sheet-rolltemplate-melee-roll table {
