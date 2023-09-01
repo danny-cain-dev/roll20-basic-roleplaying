@@ -235,497 +235,72 @@
 <!-- Start of alpahbetical skills-->
 <input type="checkbox" class="sheet-toggle-alphabetical" name="attr_toggle-alphabetic"  style="display: none">
 <div class="sheet-skills-alphabetical" >
-<p>
-    <h3 class="sheet-skills-header">Skills</h3> 
-				<div class="sheet-skillmod">
-						<div style="text-align: center;">
-        						<td>Multiplier</td>
-        							<select style="font-size: 15px; margin-bottom: 0px; width: 75px; height: 50px" name="attr_Multiplier">
-                            					    <option selected="selected" value="1">1x</option>
-                            					    <option value="2">2x</option>
-                            					    <option value="1/2">1/2x</option>
-                            					    <option value="1/3">1/3x</option>
-                            					    <option value="1/4">1/4x</option>
-                            					    <option value="1/5">1/5x</option>
-                            					    <option value="1/6">1/6x</option>
-                            					    <option value="1/8">1/8x</option>
-                            					    <option value="1/10">1/10x</option>
-                            					    <option value="1/20">1/20x</option>
-        				            </select>	
-                                <input name="attr_Mods" style="font-size: 15px; margin-bottom: 0px; width: 75px; height: 50px" type="number" value="0">
-                                <td>Modifier</td>
-						</div>
-				</div>    
-    <div class='sheet-3colrow'>
-        <div class='sheet-col'>
-				<!-- Col 1 -->                
-				<table style="width: 100%">
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Appraise"  /></td>
-						<td class="sheet-skillname">Appraise (15%)</td>
-						<td><input type="number" style="width:105%" value="15" name="attr_Appraise"  /></td>
-						<td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Appraise}}} {{fumble=[[ceil(95+(@{Appraise}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Appraise}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Appraise}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Appraise}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Appraise}}"/></td>																																								
-					</tr>
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Art(05):</td>
-					</tr>
-				</table>				
-				<fieldset class='repeating_artskills'>
-					<table style="width: 100%;">	
-						<tr>
-						<td><input type="checkbox" name="attr_artSuccess"  /></td>
-						<td><input  type="text" name="attr_artSkillname" class="sheet-skillname" /></td>
-						<td><input type="number" style="width:105%" value="5" name="attr_artScore" /></td>
-					   <td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{artScore}}} {{fumble=[[ceil(95+(@{artScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{artScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{artScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{artScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{artSkillname}}}"/></td>
-					   </tr>
-					</table>
-				</fieldset>	
-				<table style="width: 100%">
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Bargain"  /></td>
-						<td class="sheet-skillname">Bargain (05%)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_Bargain"  /></td>
-						<td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{success=[[ceil(@{Bargain}*@{Multiplier}+@{Mods})]]}} {{fumble=[[ceil(95+(@{Bargain}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Bargain}*@{Multiplier}+@{Mods})/20)+1]]}}  {{special=[[ceil((@{Bargain}*@{Multiplier}+@{Mods})/5)+1]]}}  {{skillvalue=@{Bargain}}}  {{roll=[[1d100]]}} {{skillname=Bargain}}"/></td> 
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Climb"  /></td>
-						<td class="sheet-skillname">Climb (40%)</td>
-						<td><input type="number" style="width:105%" value="40" name="attr_Climb"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}    {{name=@{Name}}} {{skillvalue=@{Climb}}} {{fumble=[[ceil(95+(@{Climb}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Climb}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Climb}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Climb}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Climb}}"/></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Command"  /></td>
-						<td class="sheet-skillname">Command (05)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_Command"  /></td>
-						<td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Command}}} {{fumble=[[ceil(95+(@{Command}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Command}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Command}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Command}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Command}}"/></td>											
-					</tr>
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Craft(05):</td>
-					</tr>	
-				</table>
-				<fieldset class='repeating_craftskills'>
-					<table style="width: 100%">	
-						<td><input type="checkbox" name="attr_craftSuccess"  /></td>
-						<td><input type="text" name="attr_craftSkillname" class="sheet-skillname"/></td>
-						<td><input type="number" style="width:105%" value="5" style="width:105%" value="5" name="attr_craftScore" /></td>
-						<td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{craftScore}}} {{fumble=[[ceil(95+(@{craftScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{craftScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{craftScore}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{craftScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{craftSkillname}}}"/></td>																																																	 				 
-					</table>	
-				</fieldset>
-				<table style="width: 100%">
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Demolition"  /></td>
-						<td class="sheet-skillname">Demolition (01%)</td>
-						<td><input type="number" style="width:105%" value="1" name="attr_Demolition"  /></td>
-						<td><button type="roll" value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Demolition}}} {{fumble=[[ceil(95+(@{Demolition}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Demolition}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Demolition}*@{Multiplier}+@{Mods})/5)+1]]}}     {{success=[[ceil(@{Demolition}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Demolition}}"/></td>																																			
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Disguise"  /></td>
-						<td class="sheet-skillname">Disguise (01)</td>
-						<td><input type="number" style="width:105%" value="1"  name="attr_Disguise"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Disguise}}} {{fumble=[[ceil(95+(@{Disguise}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Disguise}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Disguise}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Disguise}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Disguise}}"/></td>										
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Dodge"  /></td>
-						<td class="sheet-skillname">Dodge (DEX x02%)</td>
-						<td><input type="number" style="width:105%"  name="attr_Dodge"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Dodge}}} {{fumble=[[ceil(95+(@{Dodge}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Dodge}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Dodge}*@{Multiplier}+@{Mods})/5)+1]]}}      {{success=[[ceil(@{Dodge}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Dodge}}"/></td>																																																																																																				
-					</tr>				
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Drive(Varies):</td>
-					</tr>	
-				</table>
-				<fieldset class='repeating_DriveSkills'>
-					<table style="width: 100%">	
-					<td><input type="checkbox" name="attr_DriveSucess"  /></td>
-					 <td><input type="text" name="attr_DriveSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" name="attr_DriveScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{DriveScore}}} {{fumble=[[ceil(95+(@{DriveScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{DriveScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{DriveScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{DriveScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Drive}}"/></td>																																																	 				 				 				 					 					 					 					 					 					
-				</fieldset>	
-				<table style="width: 100%">	
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Etiquette"  /></td>
-						<td class="sheet-skillname">Etiquette (05)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_Etiquette"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Etiquette}}}  {{fumble=[[ceil(95+(@{Etiquette}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Etiquette}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Etiquette}*@{Multiplier}+@{Mods})/5)+1]]}}     {{success=[[ceil(@{Etiquette}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Etiquette}}"/></td>															
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-FastTalk" /></td>
-						<td class="sheet-skillname">Fast Talk (05%)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_FastTalk" /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{FastTalk}}}  {{fumble=[[ceil(95+(@{FastTalk}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{FastTalk}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{FastTalk}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{FastTalk}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Fast Talk}}"/></td>
-					</tr>					
-					<tr>
-						<td><input type="checkbox" name="attr_Success-FineManipulation" /></td>
-						<td class="sheet-skillname">Fine Manipulation (05%)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_FineManipulation" /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{FineManipulation}}}  {{fumble=[[ceil(95+(@{FineManipulation}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{FineManipulation}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{FineManipulation}*@{Multiplier}+@{Mods})/5)+1]]}}     {{success=[[ceil(@{FineManipulation}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Fine Manip.}}"/></td>
-					</tr>
-
-                <tr>
-                    <td><input type="checkbox" name="attr_Success-FirstAid"  /></td>
-                    <td class="sheet-skillname">First Aid (30% or INT x1)</td>
-                    <td><input type="number" style="width:105%"  name="attr_FirstAid"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{FirstAid}}} {{fumble=[[ceil(95+(@{FirstAid}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{FirstAid}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{FirstAid}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{FirstAid}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=First Aid}}"/></td>																																													
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="attr_Success-Gaming"  /></td>
-                    <td class="sheet-skillname">Gaming (INT+POW)</td>
-                    <td><input type="number" style="width:105%" name="attr_Gaming"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Gaming}}} {{fumble=[[ceil(95+(@{Gaming}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Gaming}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Gaming}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Gaming}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Gaming}}"/></td>																																																		
-                </tr>		
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Heavy Machine (01%):</td>
-				</tr>	
-				</table>
-				<fieldset class='repeating_hMachineSkills'>
-					<table style="width: 100%">					    
-						 <td><input type="checkbox" name="attr_hMachineSuccess"  /></td>
-						 <td><input type="text" name="attr_hMachineSkills" class="sheet-skillname"/></td>
-						 <td><input type="number" style="width:105%" value="1" name="attr_hMachineScore" /></td>
-						 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{hMachineScore}}} {{fumble=[[ceil(95+(@{hMachineScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{hMachineScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{hMachineScore}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{hMachineScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{hMachineSkills}}}"/></td>																																																	 				 				 
-				</fieldset>					
-				<table style="width: 100%">		
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Hide"  /></td>
-						<td class="sheet-skillname">Hide (10%)</td>
-						<td><input type="number" style="width:105%" value="10" name="attr_Hide"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Hide}}} {{fumble=[[ceil(95+(@{Hide}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Hide}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Hide}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Hide}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Hide}}"/></td>																																																																																																														
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Insight"  /></td>
-						<td class="sheet-skillname">Insight (05%)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_Insight"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Insight}}} {{fumble=[[ceil(95+(@{Insight}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Insight}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Insight}*@{Multiplier}+@{Mods})/5)+1]]}} {{success=[[ceil(@{Insight}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Insight}}"/></td>																																																																						
-					</tr>
-				</table>
-				<!-- End of Col 1 -->	
-		</div> <!-- col 1 close -->     
-        <div class='sheet-col'><!-- col 2 start --> 
-        <!-- Start of Col 2 -->					
-		<table style="width: 100%">				
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Jump"  /></td>
-				<td class="sheet-skillname">Jump (25%)</td>
-				<td><input type="number" style="width:105%" value="25" name="attr_Jump"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Jump}}} {{fumble=[[ceil(95+(@{Jump}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Jump}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Jump}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Jump}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Jump}}"/></td>																																																																																																																			
-			</tr>
-
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Knowledge (Varies):</td>
-				</tr>	
-		</table>
-			<fieldset class='repeating_KnowSkills'>
-				<table style="width: 100%">				    
-					 <td><input type="checkbox" name="attr_KnowSucess"  /></td>
-					 <td><input type="text" name="attr_KnowSkills" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" name="attr_KnowScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{KnowScore}}} {{fumble=[[ceil(95+(@{KnowScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{KnowScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{KnowScore}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{KnowScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{KnowSkills}}}"/></td>																																																	 				 				 				 					 
-
-			</fieldset>	
-			<table style="width: 100%">					
-				<tr>
-					<td><input type="checkbox" name="attr_Success-ownLang"  /></td>
-					<td class="sheet-skillname">Language, Own (INT/EDUx5%)</td>
-					<td><input type="number"  style="width:105%"  name="attr_ownLang"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{ownLang}}}  {{fumble=[[ceil(95+(@{ownLang}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{ownLang}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{ownLang}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{ownLang}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Own Language}}"/></td>																				
-				</tr>			
-			</table>
-			<fieldset class='repeating_Langskills'>
-				<table style="width: 100%;">			
-					 <td><input type="checkbox" name="attr_LangSuccess"  /></td>
-					 <td><input type="text" name="attr_LangSkillname" class="sheet-repeat-skillname" /></td>
-					 <td><input type="number"  style="width:105%" name="attr_LangScore" /></td></td>
-				 	 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{LangScore}}} {{fumble=[[ceil(95+(@{LangScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{LangScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{LangScore}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{LangScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{LangSkillname}}}"/></td>
-			</fieldset>
-			</table>				
-			<table style="width: 100%">								
-				 <tr>
-					<td><input type="checkbox" name="attr_Success-Listen"  /></td>
-					<td class="sheet-skillname">Listen (25%)</td>
-					<td><input type="number"  style="width:105%" value="25" name="attr_Listen"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Listen}}} {{fumble=[[ceil(95+(@{Listen}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Listen}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Listen}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Listen}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Listen}}"/></td>																																																																											
-				 </tr>			
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Literacy (Varies):</td>
-				</tr>	
-			</table>
-			<fieldset class='repeating_LitSkills'>
-					<table style="width: 100%">				    
-					 <td><input type="checkbox" name="attr_LitSucess"  /></td>
-					 <td><input type="text" name="attr_LitSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" name="attr_LitScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{LitScore}}} {{fumble=[[ceil(95+(@{LitScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{LitScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{LitScore}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{LitScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{LitSkill}}}"/></td>																																																	 				 				 				 					 					 
-			</fieldset>				
-    		<table style="width: 100%;">				
-    			<tr>
-    				<td class="sheet-chkfiller"></td>
-    				<td>Martial Arts (1%):</td>
-    			</tr>	
-    		</table>
-        		<fieldset class='repeating_MartialArtsSkills'>
-        			<table style="width: 100%;">				
-        					 <td><input type="checkbox" name="attr_Success-MartialArts"  /></td>
-        					 <td><input type="text" name="attr_MartialArtSkill" class="sheet-skillname"/></td>
-        					 <td><input type="number" value="1" name="attr_MartialArts" /></td>
-        					 <td><button type="roll" value="&{template:skillRoll}   {{skillvalue=@{MartialArts}}} {{fumble=[[ceil(95+((@{MartialArts})*@{Multiplier}+@{Mods})/20)]]}} {{crit=[[ceil(((@{MartialArts})*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil(((@{MartialArts})*@{Multiplier}+@{Mods})/5)+1]]}}      {{success=[[ceil((@{MartialArts})*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{MartialArtSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 					 
-                    </table>	
-        		</fieldset>
-			<table style="width: 100%;">		
-					<tr>
-						<td><input type="checkbox" name="attr_Success-Medicine"  /></td>
-						<td class="sheet-skillname">Medicine (05%)</td>
-						<td><input type="number" style="width:105%" value="5" name="attr_Medicine"  /></td>
-						<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Medicine}}} {{fumble=[[ceil(95+(@{Medicine}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Medicine}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Medicine}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Medicine}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Medicine}}"/></td>																																																							
-					</tr>
-				<tr>
-					<td><input type="checkbox" name="attr_Success-Navigate"  /></td>
-					<td class="sheet-skillname">Navigate (10%)</td>
-					<td><input type="number" style="width:105%" value="10" name="attr_Navigate"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Navigate}}} {{fumble=[[ceil(95+(@{Navigate}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Navigate}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Navigate}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Navigate}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Navigate}}"/></td>																																																																																
-				</tr>			
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Perform (05%):</td>
-				</tr>								
-			</table>
-			<fieldset class='repeating_PerformSkills'>
-					<table style="width: 100%">				    
-					 <td><input type="checkbox" name="attr_Success-Perform"  /></td>
-					 <td><input type="text" name="attr_PerformSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" value="5" name="attr_Perform" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Perform}}} {{fumble=[[ceil(95+(@{Perform}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Perform}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Perform}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Perform}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{PerformSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 
-			</fieldset>	
-				<table style="width: 100%;">	
-				<tr>
-					<td><input type="checkbox" name="attr_Success-Persuade"  /></td>
-					<td class="sheet-skillname">Persuade (15%)</td>
-					<td><input type="number" style="width:105%" value="15" name="attr_Persuade"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Persuade}}} {{fumble=[[ceil(95+(@{Persuade}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Persuade}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Persuade}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Persuade}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Persuade}}"/></td>																														
-				</tr>			
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Pilot(Varies):</td>
-				</tr>	
-			</table>
-			<fieldset class='repeating_PilotSkills'>
-					<table style="width: 100%">	
-					 <td><input type="checkbox" name="attr_PilotSucess"  /></td>
-					 <td><input type="text" name="attr_PilotSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" name="attr_PilotScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{PilotScore}}} {{fumble=[[ceil(95+(@{PilotScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{PilotScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{PilotScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{PilotScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{PilotSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 
-			</fieldset>	
-				<table style="width: 100%;">				
-				<tr>
-					<td><input type="checkbox" name="attr_Success-Projection"  /></td>
-					<td class="sheet-skillname">Projection(DEX x02%)</td>
-					<td><input type="number" style="width:105%" name="attr_Projection"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Projection}}} {{fumble=[[ceil(95+(@{Projection}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Projection}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Projection}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Projection}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Projection}}"/></td>																														
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="attr_Success-Psychotherapy"  /></td>
-					<td class="sheet-skillname">Psychotherapy(00% or 01%)</td>
-					<td><input type="number" style="width:105%" name="attr_Psychotherapy"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Psychotherapy}}} {{fumble=[[ceil(95+(@{Psychotherapy}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Psychotherapy}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Psychotherapy}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Psychotherapy}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Psychotherapy}}"/></td>																														
-				</tr>								
-					<tr>
-					    <td class="sheet-chkfiller"></td>
-					    <td class="sheet-skillname">Repair (15%)</td>
-					</tr>
-				</table>
-				<fieldset class='repeating_repairSkills'></td>
-					<table style="width: 100%">						 
-						 <td><input type="checkbox" name="attr_repairSuccess"  /></td>
-						 <td><input type="text" name="attr_repairSkills" class="sheet-skillname"/></td>
-						 <td><input type="number" style="width:105%" value="15" name="attr_repairScore" /></td>
-						 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{repairScore}}} {{fumble=[[ceil(95+(@{repairScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{repairScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{repairScore}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{repairScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{repairSkills}}}"/></td>																																																	 				 				 				 
-				</fieldset>				
-				<table style="width: 100%;">				
-				<tr>
-					<td><input type="checkbox" name="attr_Success-Research"  /></td>
-					<td class="sheet-skillname">Research (25%)</td>
-					<td><input type="number" style="width:105%" value="25" name="attr_Research"  /></td>
-					<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Research}}} {{fumble=[[ceil(95+(@{Research}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Research}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Research}*@{Multiplier}+@{Mods})/5)+1]]}}   {{1/2success=[[ceil((@{Research}*@{Multiplier}+@{Mods})/2)+1]]}}    {{success=[[ceil(@{Research}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Research}}"/></td>																														
-				</tr>						
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Ride(Varies):</td>
-					</tr>	
-				</table>
-				<fieldset class='repeating_RideSkills'>
-					<table style="width: 100%">	
-							 <td><input type="checkbox" name="attr_RideSucess"  /></td>
-							 <td><input type="text" name="attr_RideSkill" class="sheet-skillname"/></td>
-							 <td><input type="number" style="width:105%" name="attr_RideScore" /></td>
-							 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{RideScore}}} {{fumble=[[ceil(95+(@{RideScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{RideScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{RideScore}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{RideScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{RideSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 					 
-				</fieldset>				 
-				<table style="width: 100%;">				
-						<tr>
-							<td class="sheet-chkfiller"></td>
-							<td>Science (01%)</td>
-						</tr>	
-				</table>
-				<fieldset class='repeating_ScienceSkills'>
-					<table style="width: 100%">	
-						 <td><input type="checkbox" name="attr_ScienceSucess"  /></td>
-						 <td><input type="text" name="attr_ScienceSkill" class="sheet-skillname"/></td>
-						 <td><input type="number" style="width:105%" value="1" name="attr_ScienceScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{ScienceScore}}} {{fumble=[[ceil(95+(@{ScienceScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{ScienceScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{ScienceScore}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{ScienceScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{ScienceSkill}}}"/></td>																																																	 				 				 				 					 					 					 
-				</fieldset>	
-        </div><!-- col 2 close --> 
-        <div class="sheet-col">
-			<table style="width: 100%;">		
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Sense"  /></td>
-				<td class="sheet-skillname">Sense (10%)</td>
-				<td><input type="number" style="width:105%" value="10" name="attr_Sense"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Sense}}} {{fumble=[[ceil(95+(@{Sense}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Sense}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Sense}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Sense}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Sense}}"/></td>																																																																																					
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="attr_SleightofHandSuccess"  /></td>
-				<td class="sheet-skillname">Sleight of Hand (05%)</td>
-				<td><input type="number" style="width:105%" value="5" name="attr_SleightofHandScore"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{SleightofHandScore}}} {{fumble=[[ceil(95+(@{SleightofHandScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{SleightofHandScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{SleightofHandScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{SleightofHandScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Sleight of Hand}}"/></td>																																								
-
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Spot"  /></td>
-				<td class="sheet-skillname">Spot (25%)</td>
-				<td><input type="number" style="width:105%" value="25" name="attr_Spot"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Spot}}} {{fumble=[[ceil(95+(@{Spot}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Spot}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Spot}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Spot}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Spot}}"/></td>																																																																																										
-			</tr>				
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Status"  /></td>
-				<td class="sheet-skillname">Status (05%)</td>
-				<td><input type="number" style="width:105%" value="5" name="attr_Status"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Status}}} {{fumble=[[ceil(95+(@{Status}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Status}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Status}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Status}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Status}}"/></td>																																			
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Stealth"  /></td>
-				<td class="sheet-skillname">Stealth (10%)</td>
-				<td><input type="number" style="width:105%" value="10" name="attr_Stealth"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Stealth}}} {{fumble=[[ceil(95+(@{Stealth}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Stealth}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Stealth}*@{Multiplier}+@{Mods})/5)+1]]}}  {{success=[[ceil(@{Stealth}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Stealth}}"/></td>																																																																																																																													
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Strategy"  /></td>
-				<td class="sheet-skillname">Strategy (01%)</td>
-				<td><input type="number" style="width:105%" value="1" style="width:105%" value="1" name="attr_Strategy"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Strategy}}} {{fumble=[[ceil(95+(@{Strategy}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Strategy}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Strategy}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Strategy}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Strategy}}"/></td>																																																												
-			</tr>		
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Swim"  /></td>
-				<td class="sheet-skillname">Swim (25%)</td>
-				<td><input type="number" style="width:105%" value="25" name="attr_Swim"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Swim}}} {{fumble=[[ceil(95+(@{Swim}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Swim}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Swim}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{Swim}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Swim}}"/></td>																																																																																																																																		
-			</tr>	
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Teach"  /></td>
-				<td class="sheet-skillname">Teach (10%)</td>
-				<td><input type="number" style="width:105%" value="10" name="attr_Teach"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Teach}}} {{fumble=[[ceil(95+(@{Teach}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Teach}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Teach}*@{Multiplier}+@{Mods})/5)+1]]}}     {{success=[[ceil(@{Teach}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Teach}}"/></td>																																								
-			</tr>	
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Technical Skill(Varies):</td>
-					</tr>	
-			</table>
-			<fieldset class='repeating_TechSkills'>
-					<table style="width: 100%">	
-					 <td><input type="checkbox" name="attr_TechSucess"  /></td>
-					 <td><input type="text" name="attr_TechSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" name="attr_TechScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{TechScore}}} {{fumble=[[ceil(95+(@{TechScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{TechScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{TechScore}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{TechScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{TechSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 
-			</fieldset>	
-			<table style="width: 100%;">		
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Throw"  /></td>
-				<td class="sheet-skillname">Throw (25%)</td>
-				<td><input type="number" style="width:105%" value="25" name="attr_throw"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{throw}}} {{fumble=[[ceil(95+(@{throw}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{throw}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{throw}*@{Multiplier}+@{Mods})/5)+1]]}}   {{success=[[ceil(@{throw}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Throw}}"/></td>																																																																																																																																							
-			</tr>			
-			<tr>
-				<td><input type="checkbox" name="attr_Success-Track "  /></td>
-				<td class="sheet-skillname">Track (10%)</td>
-				<td><input type="number" style="width:105%" value="10" name="attr_Track"  /></td>
-				<td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{Track}}} {{fumble=[[ceil(95+(@{Track}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Track}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Track}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Track}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=Track}}"/></td>																																																																																															
-			</tr>					
-			</table>		
-			<br />
-			<table style="width: 100%;">					
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td><strong>Other Skills</strong></td>
-					</tr>					
-			</table>
-			<fieldset class='repeating_OtherSkills'>
-					<table style="width: 100%">	
-					 <td><input type="checkbox" name="attr_OtherSucess"  /></td>
-					 <td><input type="text" name="attr_OtherSkill" class="sheet-skillname"/></td>
-					 <td><input type="number" style="width:105%" value="1" name="attr_OtherScore" /></td>
-					 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{OtherScore}}} {{fumble=[[ceil(95+(@{OtherScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{OtherScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{OtherScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{OtherScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{OtherSkill}}}"/></td>
-			</fieldset>	
-			<br />
-				<table style="width: 100%;">					
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td><strong>Combat</strong></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="sheet-chkfiller"></td>
-						<td>Melee (Physical)</td>
-					</tr>	
-				</table>	
-				
-				<fieldset class='repeating_meleeSkills'>
-					<table style="width: 100%">	
-							 <td><input type="checkbox" name="attr_meleeSucess"  /></td>
-							 <td><input type="text" name="attr_meleeSkill" class="sheet-skillname"/></td>
-							 <td><input type="number" style="width:105%" name="attr_meleeScore" /></td>
-							 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{meleeScore}}} {{fumble=[[ceil(95+(@{meleeScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{meleeScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{meleeScore}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{meleeScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{meleeSkill}}}"/></td>
-				</fieldset>				
-
-				<table style="width: 100%;">
-				<tr>
-					<td class="sheet-chkfiller"></td>
-					<td>Ranged (Manip.)</td>
-				</tr>	
-				</table>
-				<fieldset class='repeating_rangedSkills'>
-					<table style="width: 100%">	
-							 <td><input type="checkbox" name="attr_rangedSucess"  /></td>
-							 <td><input type="text" name="attr_rangedSkill" class="sheet-skillname"/></td>
-							 <td><input type="number"  style="width:105%" name="attr_rangedScore" /></td>
-							 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{rangedScore}}} {{fumble=[[ceil(95+(@{rangedScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{rangedScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{rangedScore}*@{Multiplier}+@{Mods})/5)+1]]}}      {{success=[[ceil(@{rangedScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{rangedSkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 					 
-				</fieldset>
-				
-				<table style="width: 100%;">
-				<tr>
-					<td class="sheet-chkfiller"></td>
-                    <td>Artillery (Manip.)</td>
-				</tr>	
-				</table>
-				<fieldset class='repeating_artillerySkills'>
-					<table style="width: 100%">	
-
-							 <td><input type="checkbox" name="attr_ArtillerySucess"  /></td>
-							 <td><input type="text" name="attr_ArtillerySkill" class="sheet-skillname"/></td>
-							 <td><input type="number"  style="width:105%" name="attr_ArtilleryScore" /></td>
-							 <td><button type="roll" value="&{template:skillRoll}  {{name=@{Name}}} {{skillvalue=@{ArtilleryScore}}} {{fumble=[[ceil(95+(@{ArtilleryScore}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{ArtilleryScore}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{ArtilleryScore}*@{Multiplier}+@{Mods})/5)+1]]}}     {{success=[[ceil(@{ArtilleryScore}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{ArtillerySkill}}}"/></td>																																																	 				 				 				 					 					 					 					 					 					 					 
-				</fieldset>	
-				<br />					
-            <br>
+<!-- skills -->
+	<div class="skills">
+    <h3 class="sheet-skills-header">Skills</h3>
+    <div class="sheet-skillmod">
+        <div style="text-align: center;">
+            <td>Multiplier</td>
+            <select style="font-size: 15px; margin-bottom: 0px; width: 75px; height: 50px" name="attr_Multiplier">
+                <option selected="selected" value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="1/2">1/2x</option>
+                <option value="1/3">1/3x</option>
+                <option value="1/4">1/4x</option>
+                <option value="1/5">1/5x</option>
+                <option value="1/6">1/6x</option>
+                <option value="1/8">1/8x</option>
+                <option value="1/10">1/10x</option>
+                <option value="1/20">1/20x</option>
+            </select>
+            <input name="attr_Mods" style="font-size: 15px; margin-bottom: 0px; width: 75px; height: 50px" type="number"
+                   value="0">
+            <td>Modifier</td>
         </div>
     </div>
-</p>
-				<div class="sheet-skillmod">
+
+    <div style="display: flex">
+        <div>
+            <fieldset class="repeating_skills1">
+                <input class="skill-check" type="checkbox" name="attr_Success-Skill1"/>
+                <input class="skill-name" type="text" name="attr_Skill1Name" />
+                <input class="skill-value" type="number" name="attr_Skill1Score"/>
+                <button
+                        class="skill-roll"
+                        type="roll"
+                        value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Skill1Score}}} {{fumble=[[ceil(95+(@{Skill1Score}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Skill1Score}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Skill1Score}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Skill1Score}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{Skill1Name}}}"
+                />
+            </fieldset>
+        </div>
+        <div>
+            <fieldset class="repeating_skills2">
+                <div>
+                    <input type="checkbox" name="attr_Success-Skill2"/>
+                    <input type="text" name="attr_Skill2Name" class="sheet-skillname"/>
+                    <input type="number" name="attr_Skill2Score"/>
+                    <button
+                            type="roll"
+                            value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Skill2Score}}} {{fumble=[[ceil(95+(@{Skill2Score}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Skill2Score}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Skill2Score}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Skill2Score}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{Skill2Name}}}"
+                    />
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset class="repeating_skills3">
+                <div>
+                    <input type="checkbox" name="attr_Success-Skill3"/>
+                    <input type="text" name="attr_Skill3Name" class="sheet-skillname"/>
+                    <input type="number" name="attr_Skill3Score"/>
+                    <button
+                            type="roll"
+                            value="&{template:skillRoll} {{name=@{Name}}} {{skillvalue=@{Skill3Score}}} {{fumble=[[ceil(95+(@{Skill3Score}*@{Multiplier}+@{Mods})/20))]]}} {{crit=[[ceil((@{Skill3Score}*@{Multiplier}+@{Mods})/20)+1]]}} {{special=[[ceil((@{Skill3Score}*@{Multiplier}+@{Mods})/5)+1]]}}    {{success=[[ceil(@{Skill3Score}*@{Multiplier}+@{Mods})]]}} {{roll=[[1d100]]}} {{skillname=@{Skill3Name}}}"
+                    />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>			
+	<div class="sheet-skillmod">
 						<div style="text-align: center;">
         						<td>Multiplier</td>
         							<select style="font-size: 15px; margin-bottom: 0px; width: 75px; height: 50px" name="attr_Multiplier">
