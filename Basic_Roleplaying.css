@@ -498,3 +498,26 @@ button[type="roll"].plain-major-wound::before
 	border-bottom: dotted 1px black;
     color: black;
 }
+
+    .skill-list {
+        display: grid;
+        grid-template-columns: 2em 20px 2fr 20px 1fr 20px 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: "success . name . value . roll"
+    }
+
+    .skill-check {
+        grid-area: success;
+    }
+
+    .skill-name {
+        grid-area: name;
+    }
+
+    .skill-value {
+        grid-area: value;
+    }
+
+    .skill-roll {
+        grid-area: roll;
+    }
